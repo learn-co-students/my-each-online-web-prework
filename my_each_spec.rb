@@ -20,5 +20,11 @@ describe "my_each" do
     end.should_not raise_error
   end
 
-  it "returns the original collection"
+  it "returns the original collection" do
+    tas = ['arel', 'spencer', 'jon', 'logan']
+
+    my_each(tas) do |ta|
+      puts "#{ta} is awesome"
+    end.should == tas
+  end
 end
