@@ -12,7 +12,13 @@ describe "my_each" do
     end
   end
 
-  it "can handle an empty collection"
+  it "can handle an empty collection" do
+    empty_array = []
+
+    my_each(empty_array) do
+      raise 'This block shouldnt run for empty arrays!'
+    end.should_not raise_error
+  end
 
   it "returns the original collection"
 end
