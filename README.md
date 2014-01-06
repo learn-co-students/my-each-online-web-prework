@@ -1,5 +1,5 @@
 ---
-  tags: todo, blocks
+  tags: todo, blocks, tdd, metaprogramming
   languages: ruby
 ---
 
