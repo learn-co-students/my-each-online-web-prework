@@ -1,6 +1,6 @@
 ---
   languages: ruby
-  tags: todo, blocks, tdd, metaprogramming
+  tags: todo, blocks, tdd, metaprogramming, enumerable, iteration
 ---
 
 # my_each
