@@ -25,7 +25,3 @@ to do this?
 Note: All Ruby methods accept blocks by default.
 
 Write your code in "my_each.rb".
-
-Run the tests with:
-
-`rspec my_each_spec.rb`

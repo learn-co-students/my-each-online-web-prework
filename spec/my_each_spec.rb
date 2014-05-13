@@ -1,4 +1,5 @@
-require_relative 'my_each'
+require 'spec_helper'
+require_relative '../my_each'
 
 describe "my_each" do
   it "iterates over each element" do
