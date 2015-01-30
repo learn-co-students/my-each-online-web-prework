@@ -1,4 +1,5 @@
 require_relative 'spec_helper'
+require 'pry'
 
 describe "my_each" do
   it "iterates over each element" do
@@ -22,6 +23,13 @@ describe "my_each" do
     }
 
     expect(saved_block).to_not raise_error
+  end
+
+  it "yields the correct element" do
+    words = ['hi', 'hello', 'bye', 'goodbye']
+    my_each(words) do |word|
+      expect(word).to_not eq(nil)
+    end
   end
 
   it "returns the original collection" do
