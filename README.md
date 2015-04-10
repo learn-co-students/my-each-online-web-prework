@@ -6,7 +6,7 @@
 
 # my_each
 
-Read about the yield keyword and ruby blocks.
+Read about the yield keyword and ruby blocks. It's all about differing execution to an abstract procedure or block.
 
 * [All About Ruby](http://allaboutruby.wordpress.com/) - [Ruby Blocks](http://allaboutruby.wordpress.com/2006/01/20/ruby-blocks-101/)
 * [About.com](http://ruby.about.com/) - [Block Parameters and Yielding](http://ruby.about.com/od/beginningruby/a/Block-Parameters-And-Yielding.htm)
