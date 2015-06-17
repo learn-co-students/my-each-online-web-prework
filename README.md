@@ -31,7 +31,7 @@ When we call `yielding` with the above block, we will ouput:
 
 **Yielding with parameters**
 
-The `yield` keyword can take parameters. In other words, if you use yeild and give it an argument, it will pass that argument to the block and that data will become available to the code in the block. 
+The `yield` keyword can take parameters. In other words, if you use yield and give it an argument, it will pass that argument to the block and that data will become available to the code in the block. 
 
 For example:
  
