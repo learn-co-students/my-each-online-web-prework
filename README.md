@@ -56,7 +56,11 @@ Will output:
 
 The syntax inside the block might look familiar––it is how we identify index items in a block when we call `.each` on an array and pass a block to that method call. 
 
-Read more about the yield keyword and ruby blocks. It's all about delegating execution to an abstract procedure or block.
+## Enumerators Under the Hood
+
+You've already worked with enumerator methods like `.each`, `.collect` and others. These methods are called on collections, like arrays. They take blocks as their arguments and *yield* each element of the collection to the block, allowing the code in the block to be applied to each element of the collection. 
+
+You can read more about the yield keyword and ruby blocks in the resources below. It's all about delegating the execution to an abstract procedure or block.
 
 * [All About Ruby](http://allaboutruby.wordpress.com/) - [Ruby Blocks](http://allaboutruby.wordpress.com/2006/01/20/ruby-blocks-101/)
 * [About.com](http://ruby.about.com/) - [Block Parameters and Yielding](http://ruby.about.com/od/beginningruby/a/Block-Parameters-And-Yielding.htm)
