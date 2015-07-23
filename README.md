@@ -1,13 +1,14 @@
 # My Each
 
 ## Objectives
-1. Understand how the yield keyword works in Ruby
-2. Practice using yield with blocks
-3. Gain a deeper understanding of a common iterator, `.each`
 
-## The `yield` keyword
+1. Understand how the `yield` keyword works in Ruby.
+2. Practice using `yield` with blocks.
+3. Gain a deeper understanding of the common iterator `.each`.
 
-The `yield`keyword used inside a method will allow you to call that method with a block and pass, or yield, to that block. Think of the `yield` keyword as saying "stop executing the code in this method and instead execute the code in the block. Then, return to the code in the method." 
+## The `yield` Keyword
+
+The `yield` keyword, when used inside a method, will allow you to call that method with a block and pass, or "yield", to that block. Think of the `yield` keyword as saying "stop executing the code in this method and instead execute the code in the block. Then, return to the code in the method." 
 
 Let's look at the following example: 
 
@@ -18,10 +19,10 @@ def yielding
   puts "now we are back in the method"
 end
 
-yielding {puts "the method has yielded to the block!"
+yielding {puts "the method has yielded to the block!"}
 ```
 
-When we call `yielding` with the above block, we will ouput:
+When we call `yielding` with the above block, we will output:
 
 ```ruby
 "the program is executing the code inside the method"
@@ -29,7 +30,7 @@ When we call `yielding` with the above block, we will ouput:
 "now we are back in the method"
 ```
 
-**Yielding with parameters**
+#### Yielding With Parameters
 
 The `yield` keyword can take parameters. In other words, if you use yield and give it an argument, it will pass that argument to the block and that data will become available to the code in the block. 
 
@@ -54,13 +55,13 @@ Will output:
 "now we are back in the method"
 ```
 
-The syntax inside the block might look familiar––it is how we identify index items in a block when we call `.each` on an array and pass a block to that method call. 
+The syntax inside the block might look familiar—it is how we identify index items in a block when we call `.each` on an array and pass a block to that method call. 
 
 ## Enumerators Under the Hood
 
 You've already worked with enumerator methods like `.each`, `.collect` and others. These methods are called on collections, like arrays. They take blocks as their arguments and *yield* each element of the collection to the block, allowing the code in the block to be applied to each element of the collection. 
 
-You can read more about the yield keyword and ruby blocks in the resources below. It's all about delegating the execution to an abstract procedure or block.
+You can read more about the `yield` keyword and blocks in Ruby from the resources below. It's all about delegating the execution to an abstract procedure or block.
 
 * [All About Ruby](http://allaboutruby.wordpress.com/) - [Ruby Blocks](http://allaboutruby.wordpress.com/2006/01/20/ruby-blocks-101/)
 * [About.com](http://ruby.about.com/) - [Block Parameters and Yielding](http://ruby.about.com/od/beginningruby/a/Block-Parameters-And-Yielding.htm)
@@ -70,13 +71,13 @@ You can read more about the yield keyword and ruby blocks in the resources below
 ## Instructions
 
 Now that you know how the `yield` method works, try to write your
-own version of the `each` method without using the `.each` method
-provided by Ruby. As in, try to build "my_each" using only the 
+own version of the `.each` method without using the `.each` method
+provided by Ruby. As in, try to build `my_each` using only the 
 `while` keyword and the `yield`.
 
-Fork and clone this repository. Run the test suite to gain a better understanding of what is being asked of you. You'll be writing your code in `my_each.rb`
+Fork and clone this repository. Run the test suite with the `learn` command to gain a better understanding of what is being asked of you. You'll be writing your code in `my_each.rb`
 
-Think about what's going on in `each`. It's looping through
+Think about what's going on in `.each`. It's looping through
 the elements of an array and yielding the individual
 elements one at a time to the block. What has to happen
 to do this?
@@ -107,7 +108,7 @@ and return:
 
 Just like the real `.each` method.
 
-*Note:* All Ruby methods accept blocks by default.
+**Note:** *All Ruby methods accept blocks by default.*
 
 ## Resources
 * [All About Ruby](http://allaboutruby.wordpress.com/) - [Ruby Blocks](http://allaboutruby.wordpress.com/2006/01/20/ruby-blocks-101/)
