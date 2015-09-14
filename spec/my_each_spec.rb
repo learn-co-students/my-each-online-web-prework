@@ -80,7 +80,7 @@ describe "my_each" do
     
     end
 
-  it "test that the block is run n times" do
+  it "block is run n times" do
     tas = ['arel', 'jon', 'logan', 'spencer']
     expected = tas.length
     times_called = 0
@@ -93,7 +93,7 @@ describe "my_each" do
     
   end
 
-  it "that only a single element is passed into that block." do
+  it "only single element is passed into block" do
 
     tas = ['arel', 'jon', 'logan', 'spencer']
     expected = tas.length
