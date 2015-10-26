@@ -2,6 +2,17 @@ require_relative 'spec_helper'
 require 'pry'
 
 describe "my_each" do
+  it "does not call on each" do
+    words = ['hi', 'hello', 'bye', 'goodbye']
+
+    expect(words).to_not receive(:each)
+    
+    my_each(words) do |word|
+      # Do nothing on yield
+    end
+  end
+
+
   it "iterates over each element" do
     words = ['hi', 'hello', 'bye', 'goodbye']
 
@@ -12,6 +23,7 @@ describe "my_each" do
       puts word
     end
   end
+
 
   it "can handle an empty collection" do
     empty_array = []
@@ -25,6 +37,7 @@ describe "my_each" do
     expect(saved_block).to_not raise_error
   end
 
+
   it "yields the correct element" do
     words = ['hi', 'hello', 'bye', 'goodbye']
     my_each(words) do |word|
@@ -32,11 +45,65 @@ describe "my_each" do
     end
   end
 
-  it "returns the original collection" do
-    tas = ['arel', 'spencer', 'jon', 'logan']
 
+  it "returned array contains the same elements as the original collection" do
+    tas = ['arel', 'jon', 'logan', 'spencer']
+    # array may be modified by the iteration function so 
+    # we cannot use it for verifying the results
+    # therefore we create a new copy using the clone method
+    tas_original = tas.clone
+
+    # run the method
+    # check if it returns correct values
     expect(my_each(tas) do |ta|
-      puts "#{ta} is awesome"
-    end).to eq(tas)
+      # Do nothing on yield
+    end).to contain_exactly('arel', 'jon', 'logan', 'spencer')
+  
+  end
+
+
+  it "does not modify the original collection" do
+    tas = ['arel', 'jon', 'logan', 'spencer']
+    # array may be modified by the iteration function so 
+    # we cannot use it for verifying the results
+    # therefore we create a new copy using the clone method
+    tas_original = tas.clone
+
+    # run the method
+    my_each(tas) do |ta|
+      # Do nothing on yield
+    end
+
+    # is verifying if the array we passed to method  
+    # has not been modified 
+    expect(tas).to eq(tas_original)
+    
+    end
+
+  it "block is run n times" do
+    tas = ['arel', 'jon', 'logan', 'spencer']
+    expected = tas.length
+    times_called = 0
+
+    my_each(tas) do |ta|
+      times_called += 1
+    end
+
+    expect(times_called).to eq(expected)
+    
+  end
+
+  it "only single element is passed into block" do
+
+    tas = ['arel', 'jon', 'logan', 'spencer']
+    expected = tas.length
+    times_called = 0
+
+    my_each(tas) do |ta|
+      # cannot be an array
+      expect(ta.kind_of?(Array)).to eq(false)
+      expect(ta.kind_of?(String)).to eq(true)
+    end
+
   end
 end
