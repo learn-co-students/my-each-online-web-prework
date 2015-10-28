@@ -41,10 +41,9 @@ describe "my_each" do
   it "yields the correct element" do
     words = ['hi', 'hello', 'bye', 'goodbye']
     my_each(words) do |word|
-      expect(word).to_not eq(nil)
+      expect(word).to be_a(String)
     end
   end
-
 
   it "returned array contains the same elements as the original collection" do
     tas = ['arel', 'jon', 'logan', 'spencer']
