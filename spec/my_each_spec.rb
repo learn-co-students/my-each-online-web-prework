@@ -15,6 +15,11 @@ describe "my_each" do
     expect(contents).to_not include("puts")
   end
 
+  it "calls on while" do
+    file = File.read('./my_each.rb')
+    contents = file.split(" ")
+    expect(contents).to include("while")
+  end
 
   it "iterates over each element" do
     words = ['hi', 'hello', 'bye', 'goodbye']
