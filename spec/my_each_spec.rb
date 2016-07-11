@@ -3,7 +3,7 @@ require 'pry'
 
 describe "my_each" do
   file = File.read('./my_each.rb')
-  
+
   it "does not call on .each" do
     expect(file).to_not include(".each")
   end
@@ -67,13 +67,13 @@ describe "my_each" do
 
     # run the method
     my_each(tas) do |ta|
-      # Do nothing on yield
+      ta = "testing 1 2 3"
     end
 
     # is verifying if the array we passed to method
     # has not been modified
     expect(tas).to eq(tas_original)
-    end
+  end
 
   it "block is run n times" do
     tas = ['arel', 'jon', 'logan', 'spencer']
