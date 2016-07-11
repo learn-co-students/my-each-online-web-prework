@@ -1,5 +1,4 @@
 require_relative 'spec_helper'
-require 'pry'
 
 describe "my_each" do
   it "does not call on each" do
@@ -77,7 +76,7 @@ describe "my_each" do
 
     # run the method
     my_each(tas) do |ta|
-      # Do nothing on yield
+      ta = 'hi!'
     end
 
     # is verifying if the array we passed to method
