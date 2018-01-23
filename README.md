@@ -2,8 +2,8 @@
 
 ## Objectives
 
-2. Define a method that uses `yield` and a `while` loop to pass each element of a collection to a block.
-3. Gain a deeper understanding of the common iterator `#each`.
+1. Define a method that uses `yield` and a `while` loop to pass each element of a collection to a block.
+2. Gain a deeper understanding of the common iterator `#each`.
 
 ## Instructions
 
