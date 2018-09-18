@@ -1,13 +1,13 @@
-def my_each(arr)
-  if block_given?
+def my_each(array)
     i = 0
     
-    while i < arr.length
-    yield (arr[i])
+    while i < array.length
+    yield array[i]
+    i + i + 1
   end
- arr
 end
 
-my_each(arr) do |i|
+my_each(array) do |i|
   puts i
 end
+
