@@ -1,3 +1,6 @@
-def my_each # put argument(s) here
-  # code here
-end
+def my_each (ar)
+  counter = ar.length
+  while counter > 0
+    yield ar 
+    counter -= 1
+  end
