@@ -4,4 +4,5 @@ def my_each (ar)
     yield ar[counter]
     counter -= 1
   end
+  ar
 end
