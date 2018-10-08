@@ -5,4 +5,4 @@ while element < collection.length
    element += 1
 end
 collection
-ends
+end
