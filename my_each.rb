@@ -5,3 +5,10 @@ def my_each (collection)
 
 end
 
+def my_each (collection)
+  collection = [1,2,3,4]
+  while collection < 1
+puts |1|
+collection += 1 
+end
+
