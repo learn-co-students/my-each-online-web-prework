@@ -1,5 +1,5 @@
 require_relative 'spec_helper'
-require 'pry'
+# require 'pry'
 
 describe "my_each" do
   file = File.read('./my_each.rb')
