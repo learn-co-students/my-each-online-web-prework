@@ -1,3 +1,8 @@
-def my_each # put argument(s) here
-  # code here
+def my_each(boxes)
+  n = 0 
+  while n < boxes.length 
+  yield (boxes[n])
+  n = n + 1 
+end
+boxes
 end
